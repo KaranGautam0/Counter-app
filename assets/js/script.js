@@ -44,7 +44,7 @@ const playClickSound = () => {
   audioElement.play();
 };
 
-const handleZeroValueError = () => {
+function handleZeroValueError() {
   audioElement.src = "./assets/music/errorSong.mp3";
   audioElement.play();
-};
+}
