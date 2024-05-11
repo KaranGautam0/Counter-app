@@ -18,16 +18,26 @@ function updateCounterDispaly() {
 function handleIncrement() {
   counterValue++;
   updateCounterDispaly();
+  playClickSound();
 }
 
 function handleDecreament() {
   if (counterValue > 0) {
     counterValue--;
     updateCounterDispaly();
+    playClickSound();
   }
 }
 
 function handleReset() {
   counterValue = 0;
   updateCounterDispaly();
+  playClickSound();
 }
+
+const audioElement = document.querySelector("audio");
+
+const playClickSound = () => {
+  audioElement.src = "./assets/music/clickSound.mp3";
+  audioElement.play();
+};
