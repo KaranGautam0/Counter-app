@@ -26,6 +26,8 @@ function handleDecreament() {
     counterValue--;
     updateCounterDispaly();
     playClickSound();
+  } else {
+    handleZeroValueError();
   }
 }
 
@@ -39,5 +41,10 @@ const audioElement = document.querySelector("audio");
 
 const playClickSound = () => {
   audioElement.src = "./assets/music/clickSound.mp3";
+  audioElement.play();
+};
+
+const handleZeroValueError = () => {
+  audioElement.src = "./assets/music/errorSong.mp3";
   audioElement.play();
 };
